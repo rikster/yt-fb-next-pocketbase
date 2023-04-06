@@ -2,7 +2,17 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+Download and copy [Pocketbase](https://pocketbase.io/) into the root directory, then run the follwing:
+
+```bash
+.\pocketbase.exe serve
+
+2023/04/06 15:48:05 Server started at http://127.0.0.1:8090
+ ➜ REST API: http://127.0.0.1:8090/api/
+ ➜ Admin UI: http://127.0.0.1:8090/_/
+```
+
+Then, run the Next.js development server:
 
 ```bash
 npm run dev
@@ -22,7 +32,7 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Learn More about Net.js
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -36,3 +46,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+## Technologies
+- Next.js 13
+  - very different fro previous versons
+- Pocketbase (awesome)
+  - handy little db
+  - great for POC apps/spkes 
