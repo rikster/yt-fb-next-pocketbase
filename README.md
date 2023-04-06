@@ -51,7 +51,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Technologies
 - Next.js 13
-  - very different fro previous versons
+  - very different from previous versions
+  - 
 - Pocketbase (awesome)
   - handy little db
-  - great for POC apps/spkes 
+  - great for POC apps/spikes 
