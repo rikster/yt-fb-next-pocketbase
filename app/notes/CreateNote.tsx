@@ -1,4 +1,5 @@
 'use client';
+import PocketBase from 'pocketbase';
 
 // export default function Test() {
 //   return (
@@ -8,7 +9,7 @@
 //   );
 // }
 
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 export default function CreateNote() {
@@ -17,13 +18,14 @@ export default function CreateNote() {
 
   const router = useRouter();
 
-  const create = async() => {
-    // const db = new PocketBase('http://127.0.0.1:8090');
+  const create = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const db = new PocketBase('http://127.0.0.1:8090');
 
-    // await db.records.create('notes', {
-    //   title,
-    //   content,
-    // });
+    await db.records.create('notes', {
+      title,
+      content,
+    });
 
     await fetch('http://127.0.0.1:8090/api/collections/notes/records', {
       method: 'POST',
@@ -43,7 +45,7 @@ export default function CreateNote() {
   }
 
   return (
-    <form onSubmit={create}>
+    <form onSubmit={(event) => create(event)}>
       <h3>Create a new Note</h3>
       <input
         type="text"
